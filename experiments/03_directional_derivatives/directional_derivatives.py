@@ -37,8 +37,11 @@ def normalize_direction(direction):
 
 
 increase_direction = normalize_direction(direction_increase)
+print("Normalized increase direction:", increase_direction)
 decrease_direction = normalize_direction(direction_decrease)
+print("Normalized decrease direction:", decrease_direction)
 zero_direction = normalize_direction(direction_zero)
+print("Normalized zero change direction:", zero_direction)
 
 
 # Calculate the directional derivative
@@ -62,7 +65,7 @@ W1, W2 = np.meshgrid(w1_values, w2_values)
 
 # Calculate loss over the grid
 L = compute_loss(W1, W2)
-
+print("Loss shape:", L.shape)
 # Create contour plot
 fig, ax = plt.subplots(figsize=(8, 6))
 
